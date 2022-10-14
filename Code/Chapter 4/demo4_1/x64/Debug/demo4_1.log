@@ -1,0 +1,32 @@
+﻿  camera.cpp
+  gl_app.cpp
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\gl_app.cpp(143,3): warning C4838: 从“int”转换到“BYTE”需要收缩转换
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\gl_app.cpp(304,44): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\gl_app.cpp(396,75): warning C4267: “参数”: 从“size_t”转换到“GLsizei”，可能丢失数据
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\gl_app.cpp(384,6): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  image.cpp
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\image.cpp(83,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\image.cpp(334,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  log.cpp
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\log.cpp(56,12): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\log.cpp(60,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\log.cpp(102,12): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\log.cpp(107,3): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\log.cpp(111,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  math_ops.cpp
+  brute_force.cpp
+  main.cpp
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_1\main.cpp(504,62): error C2664: “void CGL_APP::CreateDialogBox(WORD,DLGPROC)”: 无法将参数 2 从“BOOL (__cdecl *)(HWND,unsigned int,WPARAM,LPARAM)”转换为“DLGPROC”
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_1\main.cpp(504,46): message : 在匹配目标类型的范围内没有具有该名称的函数
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\gl_app.h(114,14): message : 参见“CGL_APP::CreateDialogBox”的声明
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_1\main.cpp(510,62): error C2664: “void CGL_APP::CreateDialogBox(WORD,DLGPROC)”: 无法将参数 2 从“BOOL (__cdecl *)(HWND,unsigned int,WPARAM,LPARAM)”转换为“DLGPROC”
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_1\main.cpp(510,44): message : 在匹配目标类型的范围内没有具有该名称的函数
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\gl_app.h(114,14): message : 参见“CGL_APP::CreateDialogBox”的声明
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_1\main.cpp(517,62): error C2664: “void CGL_APP::CreateDialogBox(WORD,DLGPROC)”: 无法将参数 2 从“BOOL (__cdecl *)(HWND,unsigned int,WPARAM,LPARAM)”转换为“DLGPROC”
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_1\main.cpp(517,44): message : 在匹配目标类型的范围内没有具有该名称的函数
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\Base Code\gl_app.h(114,14): message : 参见“CGL_APP::CreateDialogBox”的声明
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_1\main.cpp(491,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  terrain.cpp
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_1\terrain.cpp(49,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_1\terrain.cpp(94,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  正在生成代码...

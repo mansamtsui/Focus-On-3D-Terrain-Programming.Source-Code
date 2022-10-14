@@ -1,0 +1,7 @@
+﻿cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
+  terrain.cpp
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_3\terrain.cpp(49,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_3\terrain.cpp(94,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_3\terrain.cpp(828,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_3\terrain.cpp(873,9): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  demo4_3.vcxproj -> E:\back\cuiwenshan\Downloads\Premier Press - Focus On 3D Terrain Programming.Source Code\Code\Chapter 4\demo4_3\Debug\demo4_3.exe

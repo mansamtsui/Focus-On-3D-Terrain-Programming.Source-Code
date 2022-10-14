@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{bfca7d15-1d2b-4c0f-aa44-f69ce924fe93}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{f1cb0a6d-28a3-40ea-8a74-c18bc4115b69}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Base Code">
+      <UniqueIdentifier>{c09ba726-1122-429a-9049-4c1cb56abcd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{88b848c7-e494-4887-b879-217c7ae40a0f}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="brute_force.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="terrain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Base Code\camera.cpp">
+      <Filter>Base Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Base Code\gl_app.cpp">
+      <Filter>Base Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Base Code\image.cpp">
+      <Filter>Base Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Base Code\log.cpp">
+      <Filter>Base Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Base Code\math_ops.cpp">
+      <Filter>Base Code</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="brute_force.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="terrain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base Code\camera.h">
+      <Filter>Base Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base Code\gl_app.h">
+      <Filter>Base Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base Code\glext.h">
+      <Filter>Base Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base Code\image.h">
+      <Filter>Base Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base Code\log.h">
+      <Filter>Base Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base Code\math_ops.h">
+      <Filter>Base Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Base Code\timer.h">
+      <Filter>Base Code</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
