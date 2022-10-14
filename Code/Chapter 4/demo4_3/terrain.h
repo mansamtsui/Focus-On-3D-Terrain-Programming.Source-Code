@@ -46,9 +46,9 @@ enum ETILE_TYPES
 
 enum ELIGHTING_TYPES
 {
-	HEIGHT_BASED= 0,
-	LIGHTMAP,
-	SLOPE_LIGHT
+	HEIGHT_BASED= 0,//高度图作为光照贴图数据
+	LIGHTMAP,//加载光照图
+	SLOPE_LIGHT//斜波算法生成光照图数据
 };
 
 struct STRN_LIGHTMAP_DATA

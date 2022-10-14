@@ -925,6 +925,8 @@ void CTERRAIN::UnloadLightMap( void )
 //
 // 照明技术，可根据顶点相对于附近顶点的高度对顶点进行着色
 // 
+// 相当于一个点光源来计算光照，并不是平行光
+// 
 // Name:			CTERRAIN::CalculateLighting - public
 // Description:		Calculates lighting for the pre-set technique, and
 //					stores all computations in a lightmap
@@ -956,6 +958,7 @@ void CTERRAIN::CalculateLighting( void )
 	{
 		for( x=0; x<m_iSize; x++ )
 		{
+			//用回高度图的数据作为光照数据
 			//using height-based lighting, trivial
 			if( m_lightingType==HEIGHT_BASED )
 				SetBrightnessAtPoint( x, z, GetTrueHeightAtPoint( x, z ) );
@@ -963,20 +966,49 @@ void CTERRAIN::CalculateLighting( void )
 			//using the slope-lighting technique
 			else if( m_lightingType==SLOPE_LIGHT )
 			{
+				//确保这么做，不会超过数值边界
+				// x z 所有顶点的分布
+				// m_iDirectionX  Z  相当于一个坐标，相对于顶点数组上的位置
+				//  1,2 ->  表示第三行，第二个 顶点数据，表示灯光源的位置在这里
+				//0  0, 1, 2, 3, 4, 5, 6, 7, 8
+				//1  0, 1, 2, 3, 4, 5, 6, 7, 8
+				//2  0, 1(光源), 2, 3, 4, 5, 6, 7, 8
+				//3  0, 1, 2, 3, 4, 5, 6, 7, 8
+				//4  0, 1, 2, 3, 4, 5, 6, 7, 8
+				//5  0, 1, 2, 3, 4, 5, 6, 7, 8
+				// 
+				// 
+				// 光源-------->
+				// \ \
+				//  \  \     A
+				//   \   \     \
+				//              \ 
+				//    C          \
+				//                B
 				//ensure that we won't be stepping over array boundaries by doing this
-				if( z>=m_iDirectionZ && x>=m_iDirectionX )
+				if( z>=m_iDirectionZ && x>=m_iDirectionX )//在光源右侧的地形顶点对应的光照信息
 				{
 					//calculate the shading value using the "slope lighting" algorithm
+					//不断通过 x-m_iDirectionX, z-m_iDirectionZ 取的B，A，光源前面的点来比较
+					//如果高度值大，差值就小，会有负值，前面比B高，B就是要暗一些，因为被挡住
+					//上图是模仿书上图片编出来的图，详细看图片4.9
 					fShade= 1.0f-( GetTrueHeightAtPoint( x-m_iDirectionX, z-m_iDirectionZ ) - 
 								   GetTrueHeightAtPoint( x, z ) )/m_fLightSoftness;
+					//算出来有负值
+
+					//char buffer[64];
+					//int ret = snprintf(buffer, sizeof(buffer), "%2.2f", fShade);
+					//char* num_string = buffer;
+					//g_log.Write(LOG_PLAINTEXT, num_string);
 				}
 
 				//if we are, then just return a very bright color value (white)
+				//在光源的左侧，都表示很亮，被光源照到
 				else
 					fShade= 1.0f;
 
 				//clamp the shading value to the min/max brightness boundaries
-				if( fShade<m_fMinBrightness )
+				if( fShade<m_fMinBrightness )//限制范围
 					fShade= m_fMinBrightness;
 				if( fShade>m_fMaxBrightness )
 					fShade= m_fMaxBrightness;
