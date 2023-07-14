@@ -88,7 +88,7 @@ class CTERRAIN
 	protected:
 		STRN_HEIGHT_DATA m_heightData;	//the height data
 
-		CVECTOR m_vecScale;				//scaling variable
+		CVECTOR m_vecScale;	//缩放系数，把地形顶点放大缩小	因为这里的patch的顶点都是1个单位，到render时候要缩放才能到渲染单位		//scaling variable
 
 		//texture information
 		STRN_TEXTURE_TILES m_tiles;

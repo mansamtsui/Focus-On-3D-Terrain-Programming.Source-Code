@@ -196,7 +196,25 @@ void CQUADTREE::Render( void )
 	glBindTexture( GL_TEXTURE_2D, 0 );
 }
 
+
+/*
+		1               2
+			   |
+8              |              3
+			   |
+	UL Node*4  |   UR Node*8
+	-----------9-----------
+			   |
+7              |              4
+			   |
+	LL Node*2  |   LR Node*1
+		6               5
+*/
+
+
 //--------------------------------------------------------------
+// 处理四叉树bytes数据
+// 传播高度贴图的粗糙度（这样更多的三角形将应用于贴图的粗糙区域）
 // Name:			CQUADTREE::PropagateRoughness - private
 // Description:		Propagate the roughness of the height map (so more 
 //					triangles will get applied to rougher areas of the map)
@@ -214,14 +232,16 @@ void CQUADTREE::PropagateRoughness( void )
 	//set the iEdgeLength to 3 (lowest length possible)
 	iEdgeLength= 3;
 
+	//遍历直到最高节点
+	// 自下而上遍历所有四叉树的节点，从最低级别开始 逐步向上
 	//start off at the lowest level of detail, and traverse up to the highest node (lowest detail)
 	while( iEdgeLength<=m_iSize )
 	{
 		//offset of node edges (since all edges are the same length
-		iEdgeOffset= ( iEdgeLength-1 )>>1;
+		iEdgeOffset= ( iEdgeLength-1 )>>1;//除2
 
 		//offset of the node's children's edges
-		iChildOffset= ( iEdgeLength-1 )>>2;
+		iChildOffset= ( iEdgeLength-1 )>>2;//除4
 
 		for( z=iEdgeOffset; z<m_iSize; z+=( iEdgeLength-1 ) )
 		{
@@ -356,6 +376,7 @@ void CQUADTREE::RefineNode( float x, float z, int iEdgeLength )
 	int iChildEdgeLength;
 	int iBlend;
 
+	//通过粗糙度计算后，令这里获取的GetQuadMatrixData的四叉树矩阵值，计算这个距离，可以得到更多细分的细节
 	//calculate the distance from the current point (L1 NORM, which, essentially, is a faster version of the 
 	//normal distance equation you may be used to... yet again, thanks to Chris Cookson)
 	fViewDistance= ( float )( fabs( m_pCamera->m_vecEyePos[0]-( x*m_vecScale[0] ) )+

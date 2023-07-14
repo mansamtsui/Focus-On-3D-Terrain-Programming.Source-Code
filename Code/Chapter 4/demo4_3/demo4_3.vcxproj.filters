@@ -42,6 +42,9 @@
     <ClCompile Include="..\Base Code\math_ops.cpp">
       <Filter>Base Code</Filter>
     </ClCompile>
+    <ClCompile Include="mongoose.c">
+      <Filter>Base Code</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="brute_force.h">
@@ -73,6 +76,9 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mongoose.h">
+      <Filter>Base Code</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

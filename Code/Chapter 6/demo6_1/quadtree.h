@@ -51,18 +51,21 @@ struct SQT_VERTEX
 //--------------------------------------------------------------
 //--------------------------------------------------------------
 //- CLASS ------------------------------------------------------
+// 
+// 继续是 基于 2^n + 1方形高度图
 //--------------------------------------------------------------
 //--------------------------------------------------------------
 class CQUADTREE : public CTERRAIN
 {
 	private:
 		//the quadtree matrix (the underlying power of the engine)
-		bool* m_bpQuadMtrx;
+		unsigned char* m_ucpQuadMtrx;//四叉树的数据矩阵，整个算法的基础
 
 		//detail level variables
-		float m_fDesiredResolution;
-		float m_fMinResolution;
+		float m_fDesiredResolution;//所需渴望全局分辨率
+		float m_fMinResolution;//最小全局分辨率
 
+	void PropagateRoughness(void);
 	void RefineNode( float x, float z, int iEdgeLength, CCAMERA camera );
 	void RenderNode( float x, float z, int iEdgeLength, bool bMultiTex= true, bool bDetail= true );
 
@@ -94,6 +97,8 @@ class CQUADTREE : public CTERRAIN
 	}
 
 	//--------------------------------------------------------------
+	// 
+	// 四叉树矩阵的长度和高度图一致
 	// Name:			CQUADTREE::GetMatrixIndex - private
 	// Description:		Calculate the index value to access the quadtree matrix
 	// Arguments:		-iX, iZ: vertex to calculate the index
@@ -137,7 +142,7 @@ class CQUADTREE : public CTERRAIN
 	//					                        quadtree matrix
 	//--------------------------------------------------------------
 	inline unsigned char GetQuadMatrixData( int iX, int iZ )
-	{	return m_bpQuadMtrx[ ( iZ*m_iSize )+iX];	}
+	{	return m_ucpQuadMtrx[ ( iZ*m_iSize )+iX];	}
 
 	CQUADTREE( void ) : m_fDesiredResolution( 50.0f ), m_fMinResolution( 10.0f )
 	{	}

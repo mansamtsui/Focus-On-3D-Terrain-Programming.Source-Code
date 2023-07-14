@@ -135,6 +135,7 @@
     <ClCompile Include="..\Base Code\math_ops.cpp" />
     <ClCompile Include="brute_force.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mongoose.c" />
     <ClCompile Include="terrain.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +147,7 @@
     <ClInclude Include="..\Base Code\math_ops.h" />
     <ClInclude Include="..\Base Code\timer.h" />
     <ClInclude Include="brute_force.h" />
+    <ClInclude Include="mongoose.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="terrain.h" />
   </ItemGroup>

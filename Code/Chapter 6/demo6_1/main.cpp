@@ -97,7 +97,9 @@ bool DemoInit( void )
 	glHint( GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST );	//the nicest perspective look
 
 	//load the height map in
-	g_quadtree.MakeTerrainFault( 513, 64, 0, 255, 0.25f );
+	g_quadtree.MakeTerrainFault(513, 64, 0, 255, 0.2f );
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
 
 	//set the terrain's lighting system up
 	g_quadtree.SetLightingType( SLOPE_LIGHT );

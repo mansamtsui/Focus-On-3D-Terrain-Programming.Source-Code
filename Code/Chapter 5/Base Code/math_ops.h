@@ -34,6 +34,7 @@
 
 #define SQR( number )		( number*number )
 #define CUBE( number )		( number*number*number )
+#define SQUARE( number )	( number*number )
 
 
 //--------------------------------------------------------------

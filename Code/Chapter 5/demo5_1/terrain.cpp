@@ -113,6 +113,8 @@ bool CTERRAIN::SaveHeightMap( char* szFilename )
 	//close the file
 	fclose( pFile );
 
+	char* r = "»À";
+
 	//yahoo! The heightmap has been successfully saved
 	g_log.Write( LOG_SUCCESS, "Saved %s\n", szFilename );
 	return true;
